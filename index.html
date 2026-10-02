@@ -1,1088 +1,856 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="hi">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>JHARKHAND DIGITAL POINT</title>
-<meta name="google-site-verification" content="JF3i355mKSxN9_EgaiiGMmcLmqJyCPUOHtF6bFehhmU" />
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial,Helvetica,sans-serif;
-}
-
-body{
-    background:#f4fbff;
-    color:#073b78;
-}
-
-a{
-    text-decoration:none;
-}
-
-.topbar{
-    background:linear-gradient(90deg,#0647a5,#073b82);
-    color:white;
-    padding:9px 4%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    font-size:14px;
-    font-weight:bold;
-}
-
-.topbar span{
-    margin:0 8px;
-}
-
-.header{
-    background:white;
-    padding:14px 4%;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    box-shadow:0 2px 8px #aaa;
-    position:sticky;
-    top:0;
-    z-index:1000;
-}
-
-.logo-area{
-    display:flex;
-    align-items:center;
-    gap:12px;
-}
-
-.logo{
-    width:85px;
-    height:85px;
-    border-radius:50%;
-    border:4px solid #20a34a;
-    background:linear-gradient(135deg,#fff,#eafff0);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    font-weight:900;
-    font-size:11px;
-    color:#08733a;
-}
-
-.logo b{
-    color:#064fa7;
-    display:block;
-    font-size:13px;
-}
-
-.logo-text h1{
-    color:#064da5;
-    font-size:30px;
-    line-height:1;
-}
-
-.logo-text h1 span{
-    color:#168c43;
-}
-
-.logo-text p{
-    color:#12478a;
-    font-weight:bold;
-    margin-top:7px;
-}
-
-.nav{
-    display:flex;
-    gap:10px;
-    align-items:center;
-}
-
-.nav a{
-    color:#073b78;
-    font-weight:bold;
-    padding:11px 15px;
-    border-radius:8px;
-}
-
-.nav a:hover,
-.nav .active{
-    background:#0961c9;
-    color:white;
-}
-
-.hero{
-    width:100%;
-    min-height:380px;
-    background:
-    linear-gradient(90deg,rgba(0,52,130,.96),rgba(0,93,190,.78)),
-    radial-gradient(circle at 75% 40%,#55d4ff,transparent 35%);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    padding:35px 5%;
-    color:white;
-    overflow:hidden;
-}
-
-.hero-inner{
-    width:1200px;
-    max-width:100%;
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:35px;
-    align-items:center;
-}
-
-.hero h2{
-    font-size:50px;
-    line-height:1;
-    margin-bottom:12px;
-}
-
-.hero h2 span{
-    color:#40d66d;
-}
-
-.hero-title{
-    display:inline-block;
-    background:white;
-    color:#0754a9;
-    padding:9px 25px;
-    border-radius:30px;
-    font-size:21px;
-    font-weight:bold;
-    margin-bottom:15px;
-}
-
-.hero p{
-    font-size:19px;
-    line-height:1.6;
-}
-
-.hero-buttons{
-    margin-top:22px;
-    display:flex;
-    gap:12px;
-    flex-wrap:wrap;
-}
-
-.big-btn{
-    background:white;
-    color:#0754a9;
-    padding:13px 22px;
-    border-radius:30px;
-    font-weight:bold;
-    display:inline-block;
-}
-
-.green-btn{
-    background:#18a84b;
-    color:white;
-}
-
-.hero-box{
-    background:white;
-    border-radius:20px;
-    min-height:270px;
-    padding:20px;
-    box-shadow:0 10px 35px #002d6b;
-    color:#064a9c;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-}
-
-.hero-box h3{
-    font-size:30px;
-}
-
-.hero-box .shop{
-    margin-top:15px;
-    background:linear-gradient(135deg,#0754a9,#13a84b);
-    color:white;
-    padding:30px 20px;
-    border-radius:15px;
-}
-
-.action-row{
-    max-width:1200px;
-    margin:-25px auto 25px;
-    position:relative;
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:15px;
-    padding:0 15px;
-}
-
-.action{
-    background:white;
-    border-radius:15px;
-    padding:17px;
-    text-align:center;
-    box-shadow:0 5px 20px #b7c9d8;
-    font-weight:bold;
-}
-
-.action strong{
-    display:block;
-    font-size:20px;
-    margin-bottom:5px;
-}
-
-.action.call strong{
-    color:#0754a9;
-}
-
-.action.whatsapp strong{
-    color:#159447;
-}
-
-.action.location strong{
-    color:#0754a9;
-}
-
-.section{
-    max-width:1200px;
-    margin:35px auto;
-    padding:0 15px;
-}
-
-.section-title{
-    text-align:center;
-    margin-bottom:25px;
-}
-
-.section-title h2{
-    display:inline-block;
-    color:white;
-    background:linear-gradient(90deg,#064da5,#138c47);
-    padding:10px 35px;
-    border-radius:30px;
-    font-size:28px;
-}
-
-.section-title p{
-    margin-top:8px;
-    font-weight:bold;
-}
-
-.services{
-    display:grid;
-    grid-template-columns:repeat(6,1fr);
-    gap:12px;
-}
-
-.card{
-    background:white;
-    border:2px solid #d7efff;
-    border-radius:12px;
-    padding:12px 7px;
-    text-align:center;
-    min-height:175px;
-    box-shadow:0 3px 12px #d3e7f3;
-    transition:.25s;
-    display:flex;
-    flex-direction:column;
-    justify-content:space-between;
-}
-
-.card:hover{
-    transform:translateY(-5px);
-    box-shadow:0 8px 22px #abcfe7;
-}
-
-.icon{
-    height:72px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:52px;
-}
-
-.card h3{
-    font-size:14px;
-    color:#064b9d;
-    margin:5px 0;
-}
-
-.card p{
-    font-size:11px;
-    color:#555;
-}
-
-.click{
-    display:inline-block;
-    background:linear-gradient(90deg,#0866d0,#034ea3);
-    color:white;
-    padding:8px 15px;
-    border-radius:20px;
-    font-size:12px;
-    font-weight:bold;
-    margin-top:7px;
-}
-
-.service-section{
-    margin-top:45px;
-}
-
-.banner-row{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:15px;
-    margin-top:25px;
-}
-
-.info-banner{
-    min-height:150px;
-    border-radius:18px;
-    padding:25px;
-    color:white;
-    display:flex;
-    align-items:center;
-    font-weight:bold;
-    box-shadow:0 5px 15px #aaa;
-}
-
-.info-banner:nth-child(1){
-    background:linear-gradient(135deg,#063b92,#0877d9);
-}
-
-.info-banner:nth-child(2){
-    background:linear-gradient(135deg,#08783e,#19ad57);
-}
-
-.info-banner:nth-child(3){
-    background:linear-gradient(135deg,#8c0618,#dc263e);
-}
-
-.info-banner h3{
-    font-size:24px;
-}
-
-.wedding{
-    background:white;
-    border-radius:18px;
-    padding:20px;
-    box-shadow:0 5px 20px #d0e2ef;
-}
-
-.wedding-head{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:10px;
-    margin-bottom:18px;
-}
-
-.wedding-head h2{
-    color:#064da5;
-}
-
-.add-card{
-    background:#075dcc;
-    color:white;
-    border:0;
-    padding:11px 17px;
-    border-radius:25px;
-    font-weight:bold;
-    cursor:pointer;
-}
-
-.gallery{
-    display:grid;
-    grid-template-columns:repeat(6,1fr);
-    gap:12px;
-}
-
-.wcard{
-    border:1px solid #cfe7f7;
-    border-radius:12px;
-    overflow:hidden;
-    text-align:center;
-    background:#fff;
-}
-
-.wcard img{
-    width:100%;
-    height:110px;
-    object-fit:cover;
-    background:#eee;
-}
-
-.wcard strong{
-    display:block;
-    padding:8px 4px;
-    color:#064da5;
-    font-size:13px;
-}
-
-.delete{
-    background:#d71919;
-    color:white;
-    border:0;
-    padding:5px 10px;
-    border-radius:15px;
-    margin-bottom:8px;
-    cursor:pointer;
-}
-
-.features{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    margin:35px auto;
-    max-width:1200px;
-    padding:0 15px;
-    gap:15px;
-}
-
-.feature{
-    background:white;
-    padding:20px;
-    border-radius:15px;
-    text-align:center;
-    box-shadow:0 3px 12px #d3e2ed;
-}
-
-.feature .fi{
-    font-size:38px;
-}
-
-.feature h3{
-    margin-top:8px;
-    color:#0753a3;
-}
-
-.footer{
-    background:linear-gradient(135deg,#003b87,#0055b9);
-    color:white;
-    padding:40px 5% 15px;
-}
-
-.footer-grid{
-    max-width:1200px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:2fr 1fr 1.5fr 1.5fr;
-    gap:30px;
-}
-
-.footer h2{
-    margin-bottom:12px;
-}
-
-.footer h3{
-    margin-bottom:12px;
-}
-
-.footer p,
-.footer li{
-    line-height:1.8;
-    font-size:14px;
-}
-
-.footer ul{
-    list-style:none;
-}
-
-.footer a{
-    color:white;
-}
-
-.copyright{
-    border-top:1px solid #74a9dc;
-    margin-top:25px;
-    padding-top:15px;
-    text-align:center;
-    font-size:13px;
-}
-
-/* MOBILE */
-@media(max-width:900px){
-
-    .topbar{
-        font-size:10px;
-        flex-direction:column;
-        gap:5px;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JHARKHAND DIGITAL POINT - Digital Service Centre</title>
+  
+  <!-- Font Awesome Icons & Google Fonts -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    :root {
+      --primary: #0056b3;
+      --secondary: #003366;
+      --accent-yellow: #ffc107;
+      --green: #25d366;
+      --bg-light: #f4f7fb;
+      --text-dark: #222;
+      --text-muted: #666;
+    }
+    body {
+      background-color: var(--bg-light);
+      color: var(--text-dark);
+      overflow-x: hidden;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
     }
 
-    .header{
-        padding:10px;
+    /* TOP BAR */
+    .top-bar {
+      background: #004b99;
+      color: #fff;
+      padding: 6px 5%;
+      font-size: 13px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .top-bar-left, .top-bar-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
     }
 
-    .logo{
-        width:65px;
-        height:65px;
-        font-size:8px;
+    /* HEADER */
+    header {
+      background: #fff;
+      padding: 12px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .logo-circle {
+      width: 48px;
+      height: 48px;
+      border: 3px solid #0056b3;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      color: #0056b3;
+      font-size: 16px;
+    }
+    .logo-text h1 {
+      font-size: 20px;
+      font-weight: 800;
+      color: #0056b3;
+      line-height: 1.1;
+    }
+    .logo-text p {
+      font-size: 11px;
+      color: var(--green);
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+    nav {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+    }
+    nav a {
+      font-size: 14px;
+      font-weight: 500;
+      color: #333;
+      padding: 6px 14px;
+      border-radius: 20px;
+      transition: 0.3s;
+    }
+    nav a.active, nav a:hover {
+      background: #0056b3;
+      color: #fff;
     }
 
-    .logo b{
-        font-size:9px;
+    /* HERO SECTION */
+    .hero {
+      background: linear-gradient(115deg, #002244 0%, #004b99 50%, #0077cc 100%);
+      color: #fff;
+      padding: 40px 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-content {
+      max-width: 580px;
+      z-index: 2;
+    }
+    .hero-tagline {
+      font-size: 14px;
+      letter-spacing: 1px;
+      color: #d0e7ff;
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+    .hero-content h2 {
+      font-size: 40px;
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 10px;
+    }
+    .hero-content h2 span {
+      color: var(--accent-yellow);
+    }
+    .hero-sub {
+      font-size: 15px;
+      color: #e0f0ff;
+      margin-bottom: 12px;
+      font-weight: 500;
+    }
+    .hero-quote {
+      font-size: 16px;
+      font-weight: 600;
+      color: #fff;
+      border-bottom: 2px solid var(--accent-yellow);
+      display: inline-block;
+      padding-bottom: 4px;
+      margin-bottom: 24px;
+    }
+    .hero-btns {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .btn {
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-size: 14px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      cursor: pointer;
+    }
+    .btn-green { background: #28a745; color: #fff; }
+    .btn-whatsapp { background: #25d366; color: #fff; }
+    .btn-outline { background: #003366; color: #fff; border: 1.5px solid rgba(255,255,255,0.4); }
+    .hero-image-wrap {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+    }
+    .hero-img {
+      max-width: 330px;
+      border-radius: 16px;
+      filter: drop-shadow(0 10px 25px rgba(0,0,0,0.3));
+    }
+    .proprietor-badge {
+      margin-top: 8px;
+      font-size: 18px;
+      font-weight: 700;
+      color: #fff;
+      font-family: cursive;
+    }
+    .proprietor-badge small {
+      display: block;
+      font-family: 'Poppins', sans-serif;
+      font-size: 12px;
+      color: #cfe2ff;
+      font-weight: 400;
     }
 
-    .logo-text h1{
-        font-size:19px;
+    /* NOTICE BOARD */
+    .notice-section {
+      padding: 25px 5%;
+    }
+    .notice-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 18px 24px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .notice-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .notice-title i {
+      font-size: 32px;
+      color: #ff5722;
+    }
+    .notice-title h3 {
+      font-size: 20px;
+      font-weight: 700;
+      color: #003366;
+    }
+    .notice-list {
+      list-style: none;
+      flex: 1;
+      min-width: 280px;
+    }
+    .notice-list li {
+      font-size: 13px;
+      margin-bottom: 6px;
+      color: #333;
+    }
+    .notice-list li strong {
+      color: #0056b3;
+    }
+    .btn-view-all {
+      background: #0056b3;
+      color: #fff;
+      padding: 8px 18px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
     }
 
-    .logo-text p{
-        font-size:10px;
+    /* SECTION HEADING */
+    .sec-header {
+      text-align: center;
+      margin: 35px 0 25px;
+    }
+    .sec-header h2 {
+      font-size: 26px;
+      font-weight: 700;
+      color: #003366;
+      position: relative;
+      display: inline-block;
+      padding: 0 40px;
+    }
+    .sec-header h2::before, .sec-header h2::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 30px;
+      height: 2px;
+      background: #0056b3;
+    }
+    .sec-header h2::before { left: 0; }
+    .sec-header h2::after { right: 0; }
+    .sec-header p {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 4px;
     }
 
-    .nav{
-        display:none;
+    /* SERVICES GRID */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+      gap: 16px;
+      padding: 0 5% 40px;
+    }
+    .service-box {
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px 14px;
+      text-align: center;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.04);
+      border: 1px solid #edf2f7;
+      transition: transform 0.2s, box-shadow 0.2s;
+      cursor: pointer;
+    }
+    .service-box:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(0,86,179,0.12);
+    }
+    .service-box i {
+      font-size: 34px;
+      margin-bottom: 12px;
+      display: inline-block;
+    }
+    .service-box h4 {
+      font-size: 13px;
+      font-weight: 700;
+      color: #003366;
+      margin-bottom: 4px;
+    }
+    .service-box p {
+      font-size: 11px;
+      color: #777;
     }
 
-    .hero{
-        min-height:500px;
-        padding:30px 18px;
+    /* Custom Icon Colors */
+    .c-blue { color: #007bff; }
+    .c-navy { color: #003366; }
+    .c-red { color: #dc3545; }
+    .c-green { color: #28a745; }
+    .c-orange { color: #fd7e14; }
+    .c-forest { color: #198754; }
+    .c-gold { color: #ffc107; }
+    .c-cyan { color: #0dcaf0; }
+    .c-pink { color: #e83e8c; }
+    .c-teal { color: #20c997; }
+
+    /* ABOUT SECTION */
+    .about-sec {
+      background: #fff;
+      padding: 40px 5%;
+      margin: 20px 0;
+    }
+    .about-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .about-img-box {
+      position: relative;
+      text-align: center;
+    }
+    .about-img {
+      width: 240px;
+      border-radius: 14px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    }
+    .about-text {
+      flex: 1;
+      min-width: 300px;
+    }
+    .about-text h3 {
+      font-size: 22px;
+      font-weight: 700;
+      color: #003366;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 4px;
+    }
+    .about-text .sub {
+      font-size: 12px;
+      color: var(--text-muted);
+      font-weight: 600;
+      margin-bottom: 14px;
+      text-transform: uppercase;
+    }
+    .about-text p {
+      font-size: 14px;
+      line-height: 1.6;
+      color: #444;
+      margin-bottom: 14px;
+    }
+    .trust-badges {
+      display: flex;
+      gap: 20px;
+      margin: 20px 0;
+      flex-wrap: wrap;
+    }
+    .t-badge {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .t-badge i {
+      font-size: 24px;
+      color: #0056b3;
+    }
+    .t-badge div h5 {
+      font-size: 13px;
+      color: #003366;
+    }
+    .t-badge div small {
+      font-size: 11px;
+      color: #777;
     }
 
-    .hero-inner{
-        grid-template-columns:1fr;
-        text-align:center;
+    /* GALLERY */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 16px;
+      padding: 0 5% 40px;
+    }
+    .gallery-card {
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+      text-align: center;
+    }
+    .gallery-card img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+    }
+    .gallery-card p {
+      padding: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #333;
     }
 
-    .hero h2{
-        font-size:38px;
+    /* FOOTER */
+    footer {
+      background: #001f3f;
+      color: #fff;
+      padding: 40px 5% 20px;
+    }
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      flex-wrap: wrap;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      padding-bottom: 30px;
+    }
+    .footer-contact h4 {
+      font-size: 18px;
+      margin-bottom: 4px;
+    }
+    .footer-contact small {
+      color: #aaa;
+      display: block;
+      margin-bottom: 16px;
+    }
+    .footer-contact p {
+      font-size: 13px;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .footer-btns {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      justify-content: center;
+    }
+    .map-box {
+      background: #fff;
+      border-radius: 10px;
+      padding: 12px;
+      text-align: center;
+      color: #333;
+      width: 250px;
+    }
+    .map-box i {
+      font-size: 28px;
+      color: #e63946;
+    }
+    .map-box h5 {
+      font-size: 12px;
+      margin: 6px 0;
+    }
+    .btn-map {
+      background: #0056b3;
+      color: #fff;
+      padding: 6px 14px;
+      border-radius: 16px;
+      font-size: 11px;
+      display: inline-block;
+    }
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 20px;
+      font-size: 12px;
+      color: #aaa;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    .social-links {
+      display: flex;
+      gap: 12px;
+    }
+    .social-links a {
+      width: 32px;
+      height: 32px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+    .social-links a:hover {
+      background: #0056b3;
     }
 
-    .hero-title{
-        font-size:16px;
+    /* MOBILE RESPONSIVE */
+    @media (max-width: 768px) {
+      .top-bar { font-size: 11px; justify-content: center; text-align: center; }
+      nav { display: none; } /* Mobile me clean look ke liye */
+      .hero { flex-direction: column; text-align: center; padding: 30px 5%; }
+      .hero-quote { margin: 0 auto 20px; }
+      .hero-btns { justify-content: center; }
+      .hero-image-wrap { margin-top: 30px; }
+      .about-container { flex-direction: column; text-align: center; }
+      .about-text h3 { justify-content: center; }
+      .trust-badges { justify-content: center; }
+      .footer-top { flex-direction: column; align-items: center; text-align: center; }
+      .footer-contact p { justify-content: center; }
+      .footer-bottom { justify-content: center; text-align: center; }
     }
-
-    .hero p{
-        font-size:15px;
-    }
-
-    .hero-buttons{
-        justify-content:center;
-    }
-
-    .hero-box{
-        min-height:170px;
-    }
-
-    .action-row{
-        grid-template-columns:1fr;
-        margin:15px;
-    }
-
-    .services{
-        grid-template-columns:repeat(2,1fr);
-        gap:10px;
-    }
-
-    .card{
-        min-height:175px;
-    }
-
-    .banner-row{
-        grid-template-columns:1fr;
-    }
-
-    .gallery{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .features{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .footer-grid{
-        grid-template-columns:1fr 1fr;
-    }
-}
-
-@media(max-width:500px){
-
-    .services{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .card{
-        min-height:165px;
-    }
-
-    .icon{
-        height:60px;
-        font-size:42px;
-    }
-
-    .card h3{
-        font-size:12px;
-    }
-
-    .click{
-        font-size:11px;
-        padding:7px 10px;
-    }
-
-    .section-title h2{
-        font-size:21px;
-        padding:9px 22px;
-    }
-
-    .features{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .footer-grid{
-        grid-template-columns:1fr;
-    }
-}
-</style>
+  </style>
 </head>
-
 <body>
 
-<!-- TOP BAR -->
-<div class="topbar">
-    <div>📍 MAIN ROAD CHITROKURHA MANDRO GIRIDIH JHARKHAND 815314</div>
-    <div>📞 7050258894 &nbsp; | &nbsp; 6201441189 &nbsp; | &nbsp; 🟢 WhatsApp</div>
-</div>
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <div class="top-bar-left">
+      <span><i class="fa-solid fa-location-dot"></i> MAIN ROAD CHITROKURHA MANDRO GIRIDIH JHARKHAND 815314</span>
+    </div>
+    <div class="top-bar-right">
+      <span><i class="fa-solid fa-phone"></i> 7050258894</span>
+      <span><i class="fa-brands fa-whatsapp"></i> 6201441189</span>
+    </div>
+  </div>
 
-<!-- HEADER -->
-<header class="header">
-
+  <!-- HEADER -->
+  <header>
     <div class="logo-area">
-
-        <!-- SINGLE LOGO -->
-        <div class="logo">
-            <div>
-                <b>JD</b>
-                JHARKHAND<br>
-                DIGITAL POINT
-            </div>
-        </div>
-
-        <div class="logo-text">
-            <h1>JHARKHAND <span>DIGITAL POINT</span></h1>
-            <p>Online Work & Digital Service Centre</p>
-        </div>
-
+      <div class="logo-circle">JDP</div>
+      <div class="logo-text">
+        <h1>JHARKHAND DIGITAL POINT</h1>
+        <p>Digital Service Centre</p>
+      </div>
     </div>
-
-    <nav class="nav">
-        <a href="#" class="active">Home</a>
-        <a href="#services">Services</a>
-        <a href="#wedding">Wedding Card</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#about">About Us</a>
-        <a href="#contact">Contact</a>
+    <nav>
+      <a href="#" class="active">Home</a>
+      <a href="#services">Services</a>
+      <a href="#notice">Notice</a>
+      <a href="#about">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
     </nav>
+  </header>
 
-</header>
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-content">
+      <p class="hero-tagline">Digital India | Digital Jharkhand</p>
+      <h2>JHARKHAND<br><span>DIGITAL POINT</span></h2>
+      <p class="hero-sub">Online Work • CSC Work • Printing • Digital Services</p>
+      <div class="hero-quote">आपकी हर डिजिटल जरूरत का भरोसेमंद साथी</div>
+      <div class="hero-btns">
+        <a href="tel:7050258894" class="btn btn-green"><i class="fa-solid fa-phone"></i> Call Now</a>
+        <a href="https://wa.me/916201441189" class="btn btn-whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+        <a href="https://maps.google.com/?q=Chitrokurha+Mandro+Giridih" target="_blank" class="btn btn-outline"><i class="fa-solid fa-location-dot"></i> Get Directions</a>
+      </div>
+    </div>
+    <div class="hero-image-wrap">
+      <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80" alt="Rahul Kumar Proprietor" class="hero-img">
+      <div class="proprietor-badge">
+        Rahul Kumar
+        <small>Proprietor</small>
+      </div>
+    </div>
+  </section>
 
-
-<!-- HERO -->
-<section class="hero">
-
-    <div class="hero-inner">
-
+  <!-- NOTICE BOARD -->
+  <section class="notice-section" id="notice">
+    <div class="notice-card">
+      <div class="notice-title">
+        <i class="fa-solid fa-bullhorn"></i>
         <div>
-
-            <div class="hero-title">
-                एक ही स्थान – सभी डिजिटल सेवाएँ
-            </div>
-
-            <h2>
-                JHARKHAND<br>
-                <span>DIGITAL POINT</span>
-            </h2>
-
-            <p>
-                Online Work & Digital Service Centre
-            </p>
-
-            <p>
-                तेज सेवा • सुरक्षित सेवा • भरोसेमंद सेवा
-            </p>
-
-            <div class="hero-buttons">
-                <a class="big-btn" href="tel:7050258894">
-                    📞 Call Now
-                </a>
-
-                <a class="big-btn green-btn"
-                   href="https://wa.me/917050258894"
-                   target="_blank">
-                    🟢 WhatsApp
-                </a>
-            </div>
-
+          <h3>महत्वपूर्ण सूचना</h3>
+          <small style="color: #666; font-weight: 600;">NOTICE BOARD</small>
         </div>
+      </div>
+      <ul class="notice-list">
+        <li><strong>15 Sep 2025 |</strong> Scholarship Form Filling Started. Contact for Online Apply.</li>
+        <li><strong>12 Sep 2025 |</strong> PAN Card New Update - Apply Online Now.</li>
+        <li><strong>08 Sep 2025 |</strong> Ayushman Card बनवाने हेतु संपर्क करें।</li>
+        <li><strong>05 Sep 2025 |</strong> सभी प्रकार के CSC कार्य अब और भी तेज सेवा में।</li>
+      </ul>
+      <a href="#services" class="btn-view-all">View All <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </section>
 
-
-        <div class="hero-box">
-
-            <div class="shop">
-
-                <h3>🏪 JHARKHAND DIGITAL POINT</h3>
-
-                <p>
-                    Online Work & Digital Service Centre
-                </p>
-
-                <br>
-
-                <p>
-                    ✓ आवेदन फॉर्म<br>
-                    ✓ प्रमाण पत्र<br>
-                    ✓ पैसा निकासी<br>
-                    ✓ प्रिंटिंग & स्टेशनरी<br>
-                    ✓ फोटो फ्रेम<br>
-                    ✓ Wedding Card Printing
-                </p>
-
-            </div>
-
-        </div>
-
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="sec-header">
+      <h2>हमारी सेवाएँ</h2>
+      <p>All Digital & Online Services</p>
     </div>
 
-</section>
-
-
-<!-- ACTION BUTTONS -->
-<div class="action-row">
-
-    <div class="action call">
-        <strong>📞 Call Now</strong>
-        7050258894 | 6201441189
+    <div class="services-grid">
+      <!-- 1 -->
+      <div class="service-box">
+        <i class="fa-solid fa-id-card c-blue"></i>
+        <h4>PAN CARD</h4>
+        <p>Online Application</p>
+      </div>
+      <!-- 2 -->
+      <div class="service-box">
+        <i class="fa-solid fa-person-booth c-navy"></i>
+        <h4>VOTER CARD</h4>
+        <p>Voter Related Work</p>
+      </div>
+      <!-- 3 -->
+      <div class="service-box">
+        <i class="fa-solid fa-fingerprint c-red"></i>
+        <h4>AADHAAR</h4>
+        <p>Aadhaar Services</p>
+      </div>
+      <!-- 4 -->
+      <div class="service-box">
+        <i class="fa-solid fa-heart-pulse c-green"></i>
+        <h4>AYUSHMAN CARD</h4>
+        <p>Health Card</p>
+      </div>
+      <!-- 5 -->
+      <div class="service-box">
+        <i class="fa-solid fa-receipt c-orange"></i>
+        <h4>RATION CARD</h4>
+        <p>Ration Card Service</p>
+      </div>
+      <!-- 6 -->
+      <div class="service-box">
+        <i class="fa-solid fa-mountain c-forest"></i>
+        <h4>JHARBHOOMI</h4>
+        <p>Land Record</p>
+      </div>
+      <!-- 7 -->
+      <div class="service-box">
+        <i class="fa-solid fa-stamp c-cyan"></i>
+        <h4>JHARSEWA</h4>
+        <p>Certificate Online</p>
+      </div>
+      <!-- 8 -->
+      <div class="service-box">
+        <i class="fa-solid fa-file-pen c-gold"></i>
+        <h4>ONLINE FORM</h4>
+        <p>Form Filling</p>
+      </div>
+      <!-- 9 -->
+      <div class="service-box">
+        <i class="fa-solid fa-graduation-cap c-blue"></i>
+        <h4>SCHOLARSHIP</h4>
+        <p>Scholarship Form</p>
+      </div>
+      <!-- 10 -->
+      <div class="service-box">
+        <i class="fa-solid fa-print c-navy"></i>
+        <h4>PRINTING</h4>
+        <p>Print & Xerox</p>
+      </div>
+      <!-- 11 -->
+      <div class="service-box">
+        <i class="fa-solid fa-credit-card c-blue"></i>
+        <h4>PVC CARD</h4>
+        <p>PVC Card Printing</p>
+      </div>
+      <!-- 12 -->
+      <div class="service-box">
+        <i class="fa-solid fa-camera c-teal"></i>
+        <h4>PASSPORT PHOTO</h4>
+        <p>Photo Service</p>
+      </div>
+      <!-- 13 -->
+      <div class="service-box">
+        <i class="fa-solid fa-envelope-open-text c-pink"></i>
+        <h4>WEDDING CARD</h4>
+        <p>Wedding Card Print</p>
+      </div>
+      <!-- 14 -->
+      <div class="service-box">
+        <i class="fa-solid fa-address-card c-forest"></i>
+        <h4>ID CARD PRINT</h4>
+        <p>ID Card Printing</p>
+      </div>
+      <!-- 15 -->
+      <div class="service-box">
+        <i class="fa-solid fa-boxes-stacked c-red"></i>
+        <h4>STATIONERY</h4>
+        <p>Gift & Stationery</p>
+      </div>
+      <!-- 16 -->
+      <div class="service-box">
+        <i class="fa-solid fa-image c-gold"></i>
+        <h4>PHOTO FRAME</h4>
+        <p>Photo Frame</p>
+      </div>
+      <!-- 17 -->
+      <div class="service-box">
+        <i class="fa-solid fa-video c-navy"></i>
+        <h4>VIDEOGRAPHY</h4>
+        <p>Photo & Video</p>
+      </div>
+      <!-- 18 -->
+      <div class="service-box">
+        <i class="fa-solid fa-laptop-code c-blue"></i>
+        <h4>ALL CSC WORK</h4>
+        <p>CSC Centre Work</p>
+      </div>
     </div>
+  </section>
 
-    <div class="action whatsapp">
-        <strong>🟢 WhatsApp</strong>
-        <a href="https://wa.me/917050258894" target="_blank">
-            Chat Now
-        </a>
-    </div>
-
-    <div class="action location">
-        <strong>📍 Our Location</strong>
-        MAIN ROAD CHITROKURHA
-    </div>
-
-</div>
-
-
-<!-- SERVICES -->
-<section class="section" id="services">
-
-    <div class="section-title">
-        <h2>हमारी सेवाएँ</h2>
-        <p>क्लिक करें और अपनी सेवा का लाभ उठाएँ</p>
-    </div>
-
-
-    <div class="services">
-
-
-        <!-- CLICK HERE SERVICES -->
-
-        <div class="card">
-            <div class="icon">🪪</div>
-            <h3>PAN CARD</h3>
-            <p>पैन कार्ड आवेदन एवं संशोधन सेवा</p>
-            <a class="click" href="https://www.incometax.gov.in/" target="_blank">
-                Click Here
-            </a>
+  <!-- ABOUT SECTION -->
+  <section class="about-sec" id="about">
+    <div class="about-container">
+      <div class="about-img-box">
+        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80" alt="About" class="about-img">
+        <div class="proprietor-badge" style="color: #003366;">
+          Rahul Kumar
+          <small style="color: #666;">Proprietor</small>
         </div>
-
-
-        <div class="card">
-            <div class="icon">🗳️</div>
-            <h3>VOTER CARD</h3>
-            <p>मतदाता कार्ड सेवा</p>
-            <a class="click" href="https://voters.eci.gov.in/" target="_blank">
-                Click Here
-            </a>
-        </div>
-
-
-        <div class="card">
-            <div class="icon">🪪</div>
-            <h3>AADHAAR</h3>
-            <p>आधार कार्ड सेवा</p>
-            <a class="click" href="https://myaadhaar.uidai.gov.in/" target="_blank">
-                Click Here
-            </a>
-        </div>
-
-
-        <div class="card">
-            <div class="icon">🏥</div>
-            <h3>AAYUSHMAN CARD</h3>
-            <p>आयुष्मान भारत कार्ड सेवा</p>
-            <a class="click" href="https://beneficiary.nha.gov.in/" target="_blank">
-                Click Here
-            </a>
-        </div>
-
-
-        <div class="card">
-            <div class="icon">🍚</div>
-            <h3>RATION CARD</h3>
-            <p>राशन कार्ड सेवा</p>
-            <a class="click" href="https://aahar.jharkhand.gov.in/" target="_blank">
-                Click Here
-            </a>
-        </div>
-
-
-        <div class="card">
-            <div class="icon">🌳</div>
-            <h3>JHARBHOOMI</h3>
-            <p>जमीन/भूमि संबंधी सेवा</p>
-            <a class="click" href="https://jharbhoomi.jharkhand.gov.in/" target="_blank">
-                Click Here
-            </a>
-        </div>
-
-
-        <div class="card">
-            <div class="icon">🏛️</div>
-            <h3>JHARPLUS</h3>
-            <p>आवेदन एवं अन्य सेवाएँ</p>
-            <a class="click" href="https://jharsewa.jharkhand.gov.in/" target="_blank">
-                Click Here
-            </a>
-        </div>
-
-
-        <div class="card">
-            <div class="icon">🎁</div>
-            <h3>STATIONERY & GIFT ITEM</h3>
-            <p>स्टेशनरी एवं गिफ्ट आइटम</p>
-            <a class="click" href="#contact">
-                Click Here
-            </a>
-        </div>
-
-
-        <div class="card">
-            <div class="icon">🖼️</div>
-            <h3>PHOTO FRAME</h3>
-            <p>फोटो फ्रेम उपलब्ध</p>
-            <a class="click" href="#contact">
-                Click Here
-            </a>
-        </div>
-
-
-        <div class="card">
-            <div class="icon">📷</div>
-            <h3>VIDEOGRAPHY & PHOTOGRAPH</h3>
-            <p>फोटोग्राफी एवं वीडियोग्राफी</p>
-            <a class="click" href="#contact">
-                Click Here
-            </a>
-        </div>
-
-
-        <div class="card">
-            <div class="icon">🪪</div>
-            <h3>ID CARD PRINT</h3>
-            <p>आईडी कार्ड प्रिंट</p>
-            <a class="click" href="#contact">
-                Click Here
-            </a>
-        </div>
-
-
-        <div class="card">
-            <div class="icon">💳</div>
-            <h3>PVC CARD PRINT</h3>
-            <p>PVC कार्ड प्रिंट</p>
-            <a class="click" href="#contact">
-                Click Here
-            </a>
-        </div>
-
-
-        <!-- WITHOUT CLICK HERE -->
-
-        <div class="card">
-            <div class="icon">💰</div>
-            <h3>LIC PREMIUM</h3>
-            <p>एलआईसी प्रीमियम जमा</p>
-        </div>
-
-
-        <div class="card">
-            <div class="icon">💵</div>
-            <h3>CASH WITHDRAW</h3>
-            <p>आधार/AEPS से नकद निकासी</p>
-        </div>
-
-
-        <div class="card">
-            <div class="icon">💳</div>
-            <h3>BALANCE ENQUIRY</h3>
-            <p>बैलेंस जाँच</p>
-        </div>
-
-
-        <div class="card">
-            <div class="icon">📄</div>
-            <h3>MINI STATEMENT</h3>
-            <p>मिनी स्टेटमेंट</p>
-        </div>
-
-
-        <div class="card">
-            <div class="icon">🖨️</div>
-            <h3>LAMINATION</h3>
-            <p>लेमिनेशन सेवा</p>
-        </div>
-
-
-        <div class="card">
-            <div class="icon">📄</div>
-            <h3>ONLINE FORM</h3>
-            <p>ऑनलाइन फॉर्म भरना</p>
-        </div>
-
-
-        <div class="card">
-            <div class="icon">🎓</div>
-            <h3>SCHOLARSHIP</h3>
-            <p>छात्रवृत्ति आवेदन</p>
-        </div>
-
-
-        <div class="card">
-            <div class="icon">📑</div>
-            <h3>XEROX</h3>
-            <p>फोटोकॉपी सेवा</p>
-        </div>
-
-
-        <div class="card">
-            <div class="icon">🖨️</div>
-            <h3>PRINT</h3>
-            <p>कलर एवं B/W प्रिंट</p>
-        </div>
-
-
-        <div class="card">
-            <div class="icon">📸</div>
-            <h3>PASSPORT PHOTO</h3>
-            <p>पासपोर्ट फोटो</p>
-        </div>
-
-
-        <div class="card">
-            <div class="icon">📜</div>
-            <h3>CHARACTER CERTIFICATE</h3>
-            <p>चरित्र प्रमाण पत्र</p>
-        </div>
-
-
-        <div class="card">
-            <div class="icon">💍</div>
-            <h3>WEDDING CARD PRINT</h3>
-            <p>शादी कार्ड प्रिंट</p>
-        </div>
-
-
-        <div class="card">
-            <div class="icon">🏪</div>
-            <h3>CSC CENTRE WORK</h3>
-            <p>CSC सेंटर सेवाएँ</p>
-        </div>
-
-
-        <div class="card">
-            <div class="icon">⚙️</div>
-            <h3>OTHER SERVICES</h3>
-            <p>अन्य सेवाएँ</p>
-        </div>
-
-
-    </div>
-
-</section>
-
-
-<!-- THREE BANNERS -->
-<section class="section">
-
-    <div class="banner-row">
-
-        <div class="info-banner">
+      </div>
+      <div class="about-text">
+        <h3><i class="fa-solid fa-user-tie"></i> हमारे बारे में</h3>
+        <div class="sub">About JHARKHAND DIGITAL POINT</div>
+        <p><strong>JHARKHAND DIGITAL POINT</strong> एक विश्वसनीय डिजिटल सेवा केंद्र है, जहाँ आपको सभी प्रकार की ऑनलाइन सेवाएँ, CSC कार्य, प्रिंटिंग और डिजिटल सेवाएँ एक ही स्थान पर मिलती है।</p>
+        <p>हमारा उद्देश्य है - <strong>तेज सेवा, सुरक्षित सेवा और भरोसेमंद सेवा।</strong></p>
+        
+        <div class="trust-badges">
+          <div class="t-badge">
+            <i class="fa-solid fa-gauge-high"></i>
             <div>
-                <h3>💻 ऑनलाइन फॉर्म भरने की सुविधा</h3>
-                <p>सरकारी एवं गैर सरकारी फॉर्म</p>
+              <h5>Fast Service</h5>
+              <small>Tez Seva</small>
             </div>
-        </div>
-
-        <div class="info-banner">
+          </div>
+          <div class="t-badge">
+            <i class="fa-solid fa-shield-halved"></i>
             <div>
-                <h3>🖨️ Printing & Digital Services</h3>
-                <p>Colour • B/W • Photo • PVC • ID Card • CSC Services</p>
+              <h5>Secure Service</h5>
+              <small>Surakshit Seva</small>
             </div>
-        </div>
-
-        <div class="info-banner">
+          </div>
+          <div class="t-badge">
+            <i class="fa-solid fa-handshake"></i>
             <div>
-                <h3>💍 Wedding Card Printing</h3>
-                <p>शानदार कार्ड डिजाइन एवं प्रिंटिंग</p>
+              <h5>Trusted Service</h5>
+              <small>Bharosemand Seva</small>
             </div>
+          </div>
         </div>
 
+        <a href="https://wa.me/916201441189" class="btn btn-green">More About Us <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery">
+    <div class="sec-header">
+      <h2>हमारी गैलरी</h2>
+      <p>Our Gallery</p>
     </div>
 
-</section>
+    <div class="gallery-grid">
+      <div class="gallery-card">
+        <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=300&q=80" alt="Shop View">
+        <p>Shop View</p>
+      </div>
+      <div class="gallery-card">
+        <img src="https://images.unsplash.com/photo-1588702547919-26089e690ecc?auto=format&fit=crop&w=300&q=80" alt="Printing Work">
+        <p>Printing Work</p>
+      </div>
+      <div class="gallery-card">
+        <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=300&q=80" alt="Wedding Cards">
+        <p>Wedding Cards</p>
+      </div>
+      <div class="gallery-card">
+        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80" alt="Photo Service">
+        <p>Photo Service</p>
+      </div>
+      <div class="gallery-card">
+        <img src="https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?auto=format&fit=crop&w=300&q=80" alt="Stationery & Gift">
+        <p>Stationery & Gift</p>
+      </div>
+      <div class="gallery-card">
+        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=300&q=80" alt="CSC Services">
+        <p>CSC Services</p>
+      </div>
+    </div>
+  </section>
 
+  <!-- FOOTER -->
+  <footer id="contact">
+    <div class="footer-top">
+      <div class="footer-contact">
+        <h4>संपर्क करें</h4>
+        <small>Get In Touch</small>
+        <p><i class="fa-solid fa-phone" style="color: #28a745;"></i> 7050258894</p>
+        <p><i class="fa-brands fa-whatsapp" style="color: #25d366;"></i> 6201441189</p>
+        <p><i class="fa-solid fa-location-dot" style="color: #ffc107;"></i> MAIN ROAD CHITROKURHA, MANDRO GIRIDIH, JHARKHAND 815314</p>
+      </div>
 
-<!-- WEDDING CARD GALLERY -->
-<section class="section" id="wedding">
+      <div class="footer-btns">
+        <a href="tel:7050258894" class="btn btn-green"><i class="fa-solid fa-phone"></i> Call Now</a>
+        <a href="https://wa.me/916201441189" class="btn btn-whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp Now</a>
+      </div>
 
-<div class="wedding">
-
-    <div class="wedding-head">
-
-        <h2>💗 Wedding Card Gallery</h2>
-
-        <button class="add-card" onclick="addWeddingCard()">
-            ＋ Add Card
-        </button>
-
+      <div class="map-box">
+        <i class="fa-solid fa-location-pin"></i>
+        <h5>JHARKHAND DIGITAL POINT</h5>
+        <a href="https://maps.google.com/?q=Chitrokurha+Mandro+Giridih" target="_blank" class="btn-map">View on Google Maps</a>
+      </div>
     </div>
 
-    <div class="gallery" id="gallery"></div>
+    <div class="footer-bottom">
+      <div class="social-links">
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        <a href="https://wa.me/916201441189"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
 
-</div>
+      <div style="text-align: center;">
+        <h4 style="color: #fff; font-size: 14px;">JHARKHAND DIGITAL POINT</h4>
+        <p style="font-size: 11px;">Digital Service • Online Work • Printing</p>
+        <p style="font-size: 10px; margin-top: 4px;">© 2026 JHARKHAND DIGITAL POINT | All Rights Reserved</p>
+      </div>
 
-</section>
-
-
-<!-- FEATURES -->
-<div class="features" id="about">
-
-    <div class="feature">
-        <div class="fi">🖨️</div>
-        <h3>High Quality Printing</h3>
-        <p>उच्च गुणवत्ता वाली प्रिंटिंग</p>
+      <div style="font-style: italic; color: #ffc107; font-size: 13px;">
+        Digital Seva, Sabke Liye...
+      </div>
     </div>
+  </footer>
 
-    <div class="feature">
-        <div class="fi">🛡️</div>
-        <h3>100% Genuine Service</h3>
-        <p>भरोसेमंद सेवा</p>
-    </div>
-
-    <div class="feature">
-        <div class="fi">👨‍💼</div>
-        <h3>Experienced Staff</h3>
-        <p>अनुभवी स्टाफ</p>
-    </div>
-
-    <div class="feature">
-        <div class="fi">⭐</div>
-        <h3>Customer Satisfaction</h3>
-        <p>ग्राहक संतुष्टि हमारी
+</body>
+</html>
